@@ -7,37 +7,52 @@
     <title>MEM SLIDER</title>
   <body>
     <div class="wrapper">
-        <input type="radio" class="dot" id="slide-one">
-        <input type="radio" class="dot" id="slide-two">
-        <input type="radio" class="dot" id="slide-three">
-        <input type="radio" class="dot" id="slide-four">
-        <div class="slider-container">
-            <div class="slides slide-one"></div>
-            <div class="slides slide-two"></div>
-            <div class="slides slide-three"></div>
-            <div class="slides slide-four"></div>
-        </div>
-        <div class="controls-container">
-                <label class="label-one" for="slide-one">
-                    <span class="span"></span>
-                </label>
-                <label class="label-two" for="slide-two"></label>
-                    <span class="span"></span>
-                </label>
-                <label class="label-three" for="slide-three">
-                    <span class="span"></span>
-                </label>
-                <label class="label-four" for="slide-four">
-                    <span class="span"></span>
-                </label>
-        </div>
-            <div class="text-container">
-                <div class="text text-one"></div>
-                <div class="text text-two"></div>
-                <div class="text text-three"></div>
-                <div class="text text-four"></div>
+      <input type="radio" class="point" id="slide-one" checked name="slider-control">
+      <input type="radio" class="point" id="slide-two" name="slider-control">
+      <input type="radio" class="point" id="slide-three" name="slider-control">
+      <input type="radio" class="point" id="slide-four" name="slider-control">
+      <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slides slide-one"></div>
+                <div class="slides slide-two"></div>
+                <div class="slides slide-three"></div>
+                <div class="slides slide-four"></div>
+            </div>
+      </div>
+
+      <div class="text-controls-container">
+        <div class="text-container">
+          <div class="text-wrapper">
+            <div class="text text-one">
+                <p>Астанавитесь!</p>
+            </div>
+            <div class="text text-two">
+                <p>Што?</p>
+            </div>
+            <div class="text text-three">
+                <p>Мало кто может.</p>
+            </div>
+            <div class="text text-four">
+                <p>Який жах...</p>
             </div>
           </div>
+        </div>
+
+        <div class="label-container">
+          <label class="label-one" for="slide-one">
+            <span class="span"></span>
+        </label>
+        <label class="label-two" for="slide-two">
+            <span class="span"></span>
+        </label>
+        <label class="label-three" for="slide-three">
+            <span class="span"></span>
+        </label>
+        <label class="label-four" for="slide-four">
+            <span class="span"></span>
+        </label>
+        </div>
+      </div>
     </div>
-    </body>
-    </html>
+  </body>
+</html>

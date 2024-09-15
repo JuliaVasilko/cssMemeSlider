@@ -1,3 +1,211 @@
+html {
+  display: block;
+  line-height: 2;
+  -webkit-text-size-adjust: 100%;
+  body {
+    background-image: url(./assets/flag.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    margin: 0;
+  }
+}
 .wrapper {
-    
+  background-color: rgba(237, 231, 225, 0.7);
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 10vw;
+}
+input {
+  display: none;
+}
+.slider-container {
+  width: calc(10vw + 300px);
+  height: calc(10vh + 300px);
+  overflow: hidden;
+}
+.slider-wrapper {
+  width: calc(10vw + 300px);
+  height: calc(10vh + 300px);
+  display: flex;
+  flex-direction: column;
+  transition: 600ms;
+}
+.slides {
+  width: inherit;
+  flex: 0 0 calc(10vh + 300px);
+  height: calc(10vh + 300px);
+  background-size: cover;
+}
+
+#slide-one:checked ~ .slider-container .slider-wrapper {
+  transform: translateY(0);
+}
+#slide-two:checked ~ .slider-container .slider-wrapper {
+  transform: translateY(-100%);
+}
+#slide-three:checked ~ .slider-container .slider-wrapper {
+  transform: translateY(-200%);
+}
+#slide-four:checked ~ .slider-container .slider-wrapper {
+  transform: translateY(-300%);
+}
+/* #slide-one:checked ~ .slider-container .slider-wrapper {
+  transform: translateX(0);
+}
+#slide-one:checked ~ .slider-container .slider-wrapper {
+  transform: translateX(0);
+} */
+
+.slide-one {
+  background-image: url(./assets/stop.jpg);
+  /* transform: translateY(-100%); */
+}
+.slide-two {
+  background-image: url(./assets/41.jpg);
+  /* transform: translateX(100%) translateY(-100%); */
+}
+.slide-three {
+  background-image: url(./assets/klichko.jpg);
+  /* transform: translateY(-100%); */
+}
+.slide-four {
+  background-image: url(./assets/sternenko.png);
+  /* transform: translateX(-100%) translateY(-300%); */
+}
+.text-controls-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .text-controls-container {
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.text-container {
+  flex: 0 0 30vw;
+  overflow: hidden;
+}
+.text-wrapper {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease;
+}
+.text {
+  flex: 0 0 30vw;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#slide-one:checked ~ .text-controls-container .text-wrapper {
+  transform: translateX(0);
+}
+#slide-two:checked ~ .text-controls-container .text-wrapper {
+  transform: translateX(-100%);
+}
+#slide-three:checked ~ .text-controls-container .text-wrapper {
+  transform: translateX(-200%);
+}
+#slide-four:checked ~ .text-controls-container .text-wrapper {
+  transform: translateX(-300%);
+}
+
+/* #slide-one:checked ~ .text-controls-container .text-one {
+  transform: translateY(0);
+}
+#slide-one:checked ~ .text-controls-container .text-two {
+  transform: translateY(-300%);
+}
+#slide-one:checked ~ .text-controls-container .text-three {
+  transform: translateY(-400%);
+}
+#slide-one:checked ~ .text-controls-container .text-four {
+  transform: translateY(-500%);
+} */
+
+.controls-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
+  align-self: flex-start;
+  position: relative;
+}
+
+.label-container {
+  flex: 0 0 30vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .label-container {
+    flex: 1 0 100%;
+    margin-top: 2rem;
+    order: -1;
+  }
+}
+label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3em;
+  border-radius: 50%;
+}
+label:hover span {
+  cursor: pointer;
+  border-color: brown;
+}
+.span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid blue;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all ease-in-out 0.5s;
+}
+#slide-one:checked
+  ~ .text-controls-container
+  .label-container
+  label:nth-of-type(1)
+  .span,
+#slide-two:checked
+  ~ .text-controls-container
+  .label-container
+  label:nth-of-type(2)
+  .span,
+#slide-three:checked
+  ~ .text-controls-container
+  .label-container
+  label:nth-of-type(3)
+  .span,
+#slide-four:checked
+  ~ .text-controls-container
+  .label-container
+  label:nth-of-type(4)
+  .span {
+  background: lightblue;
+}
+
+label:active .span {
+  background: blue;
 }
