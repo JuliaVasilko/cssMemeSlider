@@ -85,6 +85,15 @@ input {
   justify-content: space-between;
   align-items: center;
 }
+
+@media (max-width: 767px) {
+  .text-controls-container {
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .text-container {
   flex: 0 0 30vw;
   overflow: hidden;
@@ -99,7 +108,7 @@ input {
   color: black;
   font-size: 24px;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 #slide-one:checked ~ .text-controls-container .text-wrapper {
@@ -144,6 +153,13 @@ input {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .label-container {
+    flex: 1 0 100%;
+    margin-top: 2rem;
+    order: -1;
+  }
 }
 .label {
   cursor: pointer;
