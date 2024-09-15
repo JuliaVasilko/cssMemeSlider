@@ -161,14 +161,18 @@ input {
     order: -1;
   }
 }
-.label {
+label {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vw;
-  width: 6vw;
+  height: 3rem;
+  width: 3em;
   border-radius: 50%;
+}
+label:hover span {
+  cursor: pointer;
+  border-color: brown;
 }
 .span {
   display: block;
@@ -179,7 +183,6 @@ input {
   background-color: transparent;
   transition: all ease-in-out 0.5s;
 }
-
 #slide-one:checked
   ~ .text-controls-container
   .label-container
